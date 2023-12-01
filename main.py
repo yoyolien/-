@@ -64,9 +64,9 @@ while 1:
     elapsed_time = end_time - start_time
     if classtime<elapsed_time:
         break
-    driver.set_window_size(random.randint(800, 1000), random.randint(600, 800))
     for li_element in li_elements:
         if "環境檢測" not in li_element.text:
+            driver.set_window_size(random.randint(800, 1000), random.randint(600, 800))
             li_element.find_element(By.TAG_NAME, "a").click()
             time.sleep(10)
 # 關閉瀏覽器實例
